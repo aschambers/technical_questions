@@ -102,16 +102,28 @@
   	<h1>General Web Development Questions:</h1>
   	<p>
   		1.	What development tools have you used? <br />
+  			I've used many web development tools including Javascript libraries such as JQuery, Front-End Frameworks such as Bootstrap, package managers such as NPM and many more. 
 		2.	What languages have you programmed in? <br />
+			I've programmed in PHP, Python, Javascript and a little bit of Ruby, as well as Java and Visual Basic Advanced. 
 		3.	Why use version control and how should we use it effectively? <br />
+			Version control is much better for collaboration because everyone is able to work freely on a file at any time, without stepping on anyone elses toes. It is also very useful for backup or restoring previous versions as you can see what was changed at any given time period. 
 		4.	Tell me about the most recent project you worked on. What were your responsibilities? <br />
+			I've been working on a project shortly after graduation on an Agile Scrum team. Our responsibilities were to write code for the front-end admin dashboard to allow the user to make changes to the front-end such as upload an image or add text to a specific part of the website. We used Angular for the front-end which was incorporated with a Ruby on Rails backend.
 		5.	How did your education help prepare you for this job? <br />
+			I spent three-full months in an immersive program learning PHP, Python and MEAN where I was learning to code as much as 80 or more hours per week. I also have a CIS degree from CSU Stanislaus and learned some Java and Visual Basic Advanced.
 		6.	Tell me about the project you are proudest of, and what your contribution was. <br />
+			One of the projects I'm most proud of was an project written in Javascript which allowed the user to select a move and manipulate the DOM to use special effects of moves like you would be able to in Pokemon. I spent a lot of time learning how to do this using primarily Javascript. 
 		7.	What constitutes a RESTful API? <br />
+			An API that adheres to the principles of REST does not require the client to know anything about the structure of the API.Rather, the server needs to provide whatever information the client needs to interact with the service. An HTML form is an example of this: The server specifies the location of the resource, and the required fields.
 		8.	If your server was taking 10 minutes to serve an image how would you debug that performance issue? <br />
+			I would first check the image size, and possibly resize the image. 
 		9.	What is the difference between a unit test and a functional/integration test? <br />
+			A unit test, tests the smallest unit of functionality, typically a method/function and should be used to focus on a particular feature. This test should not call out into collaborators, access the network, hit the database, use the file system, spin up a thread, etc. They help prove that the smallest building blocks of your program function as intended before being put together. Integration tests build on unit tests by combining units of code and testing that the resulting combination functions correctly. The main advantage is that they will find bugs in your code that unit tests can't such as wiring bugs (instance of a class), environment bugs (it runs fine on my single-CPU machine but colleagues 4 core machine doesn't pass the tests). Functional tests check a particular feature for correctness by comparing the results for a given input against the specification. 
 		10.	What is a singleton design pattern and how would you use it? <br />
+			A singleton design pattern restricts the instantiation of a class to one object. This ensures that only one instance of the singleton class ever exists and provides global access to that instance. The instance would most likely be stored as a private static variable, which is created when the variable is initialized at some point before the static method is first called. 
+
 		11.	If I were to build a web app that could find every prime number, and would send a text message every time it finds a prime, what technologies and design patterns would you use? <br />
+
 		12.	Explain the project your proudest of: <br />
 		a.	What technologies did you use and why? <br />
 		b.	How did you architect/organize the app and why did you choose that method? <br />
@@ -119,9 +131,22 @@
 		d.	What were some challenges you faced? <br />
 		e.	What would you do differently the next time around? <br />
 		13.	Explain all of the http verbs and their functions. <br />
+			The 5 HTTP verbs are POST (Create), GET (Read), PUT (Update/Replace), PATCH (Update/Modify), and DELETE (Delete). POST is most-often utilized to create new resources, and returns an HTTP status of 201 if successful. GET is used to read data only, and not to change it. They are safe in that they may be called upon without risk of data modification or corruption. PUT is used to update capabilities but can also be used to create a resource in the case where the resource ID is chosen by the client instead of by the server. PATCH is used to modify capabilities and only needs to contain the changes to the resource. DELETE is used to delete a resource and are given an HTTP status of 200 if successful. 
 		14.	Explain the different between an SQL and NoSQL database, and why you would use each. <br />
+			SQL databases are relational databases that have a pre-defined schema whereas NoSQL databases have dynamic schema for unstructured data. SQL databases are ideal for storing data that is structured like names, addresses, contact numbers, etc. NoSQL queries are not as powerful as SQL queries because NoSQL lacks standerd interfaces necessary to carry out complex queries. SQL databases are more stable and offer stronger data integrity, whereas NoSQL will work, but aren't as stable in high-load situations and with more complex transactions. Since NoSQL handles hierarchical data better, its preferable when managing big data. 
 		15.	What factors would go into your decision to use one language over another, one framework over another? <br />
+			One huge factor that goes into choosing a framework is how compatible it is with mobile. Applications should be rapidly adaptable to change, and should scale easily. How are the response times of your framework? What are your developers skill sets? How will the site be hosted? Do you have to work with an existing code base? 
 		16.	What are the advantages of using a front-end framework? How would you decide which one you need for your project? <br />
+			Front-end frameworks are great because they promote modularity which means it's maintainable, scalable and readable. This makes it easier for developers to understand what is going on. There are also built in features like easy routing and controller assignment in Angular. There are also common libraries like an http service to make backend calls. Lastly, some frameworks collaborate well with other front-end frameworks such as Angular and Bootstrap, allowing for easy integration such as using Boostrap UI. 
+			When deciding what front-end framework is best to use for your project, several factors come into play. 
+			- How responsive is your front-end framework, and is it compatible with older browsers such as IE8. 
+			- Is your front-end framework compatible with your desired CSS pre-processor such as SaSS or Less. 
+			- Does your framework allow for easy customization, or easy to make your website different from other websites in appearance, do you care?
+			- How scalable is your code? For example, with React, whenever your state changes, the components are re-rendered. 
+			- How well does it perform? How optimal is it to render pages with a lot of dynamic content, how is the DOM manipulated?
+			- Adoption with mobile? Is it easy to develop and app on mobile with your front-end framework. With React, the langauge is so similar to React Native (IOS and Android), that it is easier than other front-end frameworks to build an app from your codebase. 
+			- How easy is it for developers to understand, React is more complex because it uses JSX.
+			- Are libraries and such included? Angular has a lot of third party libraries included which means less to manage.
 	</p>
   </div>
 </body>
