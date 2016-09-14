@@ -75,29 +75,53 @@
   	<h1>MEAN Questions:</h1>
   	<p>
   		1.	What are some benefits of client side rendering vs. back end rendering? <br />
+  			With client side rendering, you can update the screen immediately when the user clicks, rather than wait for the server to be contacted and display it. You also run into less browser compatibility issues with client side rendering. 
 		2.	Does every request need to be paired with a response? <br />
+			Every request should be paired with a response so you know your request was successful, but is not required. 
 		3.	MongoDB stores _________ ? <br />
+			MongoDB stores objects in binary form called BSON.
 		4.	What is JSON and what are some uses for it? <br />
+			JSON is short for Javascript Object Notation, and is a lightweight data interchange format that is easy for humans to read and write. Loading data quickly and asynchronously is important, and JSON allows you to do that, and overcome cross-domain issues.  
 		5.	What is ES6 and how does it relate to Javascript? <br />
+			ES6 is the sixth major release of the ECMAScript language specification. ECMAScript is the “proper” name for the language commonly referred to as JavaScript. You can use the keyword "let" to declare variables as well as var. While var results in a variable with the surrounding function as its scope, the scope of a variable declared using let is only the block it is in. This can make for cleaner code, resulting in fewer variables hanging around. There is another way to declare block-scoped variables as well. Many changes like this have changed how Javascript is written. 
 		6.	True or False, one server only has one database? Explain. <br />
+			False, you can have more than one database, but it is not recommended. You should only have one database per server, otherwise you can have performance issues, and may also encounter problems relating to maintenance, administration, upgrading your server, and concurrency. 
 		7.	How do we run Javascript on the backend? <br />
+			One way you can run Javascript on the backend is with Node, as it is built on Chrome's Javascript runtime.
 		8.	Which is more secure, the client or the server? <br />
+			One isn't more secure than the other, both have downsides with security methods that are chosen.  
 		9.	In Javascript, strings are immutable, what does this mean? <br />
+			This means you can't change the object yourself, but you can change the reference to the object. In other words, you can not change the current string, but you can return a new string. 
 		10.	What kind of scoping does Javascript use to store variables? <br />
+			In Javascript, variables that are declared within a Javascript function become local to that function. Local variables have local scope and can only be accessed within the function. Variables declared outside a function are global and can be accessed from anywhere. 
 		11.	Name three different kinds of Javascript loops. <br /> 
+			There is a FOR loop which loops through a set of code a specified number of times, a WHILE loop which loops through a set of code while a condition is true, and a DO/WHILE loop which is the same as a while loop, except it will execute a code block once, before checking if a condition is true and repeat as long as the condition is true. 
 		12.	What can be stored in a JSON attribute? <br />
+			You can store a number, string, boolean, array, object, or null as a JSON attribute. 
 		13.	What is an IDE? <br />
+			An integrated development environment (IDE) is a software suite that consolidates the basic tools developers need to write and test software. 
 		14.	What’s the difference between a terminal and an IDE? <br />
+			With a terminal, you can compile code written in a text editor of your choice, whereas an IDE is already integrated to be able to consolidate your code and write and test software all in one. 
 		15.	What happens when you try to run alert(‘hello’) on Node? <br />
+			Node will crash, because there is no alert function available outside the browser and is only a property of browser window objects. 
 		16.	Imagine you’re looping through an array of a hundred elements. Why would that loop run slower on a browser than in Node? <br />
+			In a web browser(Chrome), declaring a variable outside of any function scope makes it global and therefore binds to window object. As a result, running this code in a web browser requires repeatedly resolving the property within the heavily populated window namespace in each iteration of the loop. In Node.js however, declaring any variable outside of any function’s scope binds it only to the module scope (not the window object) which therefore makes it much easier and faster to resolve.
 		17.	Explain garbage collection in Javascript. <br />
+			When a block of memory (an object, say) is no longer reachable, it is eligible to be reclaimed. The DOM component is "garbage collected", as is the JScript component, which means that if you create an object within either component, and then lose track of that object, it will eventually be cleaned up.
 		18.	Javascript is a true OOP language, true or false. Explain. <br />
+			True. Unlike most object-oriented languages, JavaScript has no concept of classes, but prototypes. As such, it is indeed somewhat subjective whether to call it object-oriented or not.
 		19.	How do you write class methods in Javascript? <br />
+			There are many ways to write class methods in Javascript; you can use a constructor function, you can use prototypes, etc.
 		20.	How do you instantiate a class in Javascript? <br />
+			You can use a function to instantiate a class, you can use object literals and you can use a singleton (using a function to define a singleton object). 
 		21.	Explain the var keyword. <br />
+			The var keyword is used to declare a variable and initialize a value for it. Inside a function, it will create a local variable, outside a function it will be global. 
 		22.	Explain ‘use strict’ in Javascript. <br />
+			The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables. Strict mode makes it easier to write "secure" JavaScript. Strict mode changes previously accepted "bad syntax" into real errors. As an example, in normal JavaScript, mistyping a variable name creates a new global variable. In strict mode, this will throw an error, making it impossible to accidentally create a global variable.
 		23.	Explain when semicolons are required in Javascript. <br />
+			Often our code will run fine without semi-colons, but semi-colons indicate the end of a statement as Javascript is interpreted line by line. Code blocks do not need semi-colons, with one exception, the function expression. Statements inside the code blocks do require a semi-colon. Anything with an = operator is an assignment, which needs a semi-colon.
 		24.	In what places does the , character appear in Javascript? (hint, there are at least three) <br />
+			The comma operator evaluates each of its operands (from left to right) and returns the value of the last operand. You can use the comma operator when you want to include multiple expressions in a location that requires a single expression. The most common usage of this operator is to supply multiple parameters in a for loop. Another example that one could make with comma operator is processing before returning. It can be used in an array, in a loop, and in a function. 
   	</p>
   	<h1>General Web Development Questions:</h1>
   	<p>
@@ -121,9 +145,8 @@
 			A unit test, tests the smallest unit of functionality, typically a method/function and should be used to focus on a particular feature. This test should not call out into collaborators, access the network, hit the database, use the file system, spin up a thread, etc. They help prove that the smallest building blocks of your program function as intended before being put together. Integration tests build on unit tests by combining units of code and testing that the resulting combination functions correctly. The main advantage is that they will find bugs in your code that unit tests can't such as wiring bugs (instance of a class), environment bugs (it runs fine on my single-CPU machine but colleagues 4 core machine doesn't pass the tests). Functional tests check a particular feature for correctness by comparing the results for a given input against the specification. 
 		10.	What is a singleton design pattern and how would you use it? <br />
 			A singleton design pattern restricts the instantiation of a class to one object. This ensures that only one instance of the singleton class ever exists and provides global access to that instance. The instance would most likely be stored as a private static variable, which is created when the variable is initialized at some point before the static method is first called. 
-
 		11.	If I were to build a web app that could find every prime number, and would send a text message every time it finds a prime, what technologies and design patterns would you use? <br />
-
+			One of the technologies I would use would be twilio's API to be able to send the text message. If it were me, I would also use Javascript and write a program that would search through all of the numbers, and push prime numbers into an array that would be linked to the twilio api to be able to send a text message when it hits a prime number. 
 		12.	Explain the project your proudest of: <br />
 		a.	What technologies did you use and why? <br />
 		b.	How did you architect/organize the app and why did you choose that method? <br />
