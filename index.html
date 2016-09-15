@@ -53,24 +53,44 @@
   	<h1>Python Questions:</h1>
   	<p>
   		1.	What is the statement that can be used in Python if a statement is required syntactically but the program requires no action? <br />
+ 			You can use the pass statement, which is a no-operation/action statement in python. 
 		2.	What is a python lambda and in what situation might you need to use one? <br />
+			Python’s lambda is a tool for building functions (or more precisely, function objects). That means that Python has two tools for building functions: def and lambda. We don’t need lambda, and we could get along all right without it, but
+			there are certain situations where it is convenient — it makes writing code a bit easier, and the written code a bit cleaner.
 		3.	Name five Python modules in the standard library, and five non-standard Python modules. <br />
+			There are int(), getattr(), map(), min(), and round() modules in the standard library. In the non-standard library, 
 		4.	Walk through the steps of installing a third-party Python package or module. <br />
+			You would use pip to install the package or module, and include it at the top of your file as an import. 
 		5.	What is PEP 8? <br />
+			PEP 8 is a style guide for python code. Conforming your Python code to PEP 8 is generally a good idea and helps make code more consistent when working on projects with other developers. 
 		6.	What does the “with” statement do? <br />
+			The ‘with‘ statement clarifies code that previously would use try/finally blocks to ensure that clean-up code is executed.
 		7.	What is __init__.py? <br />
+			The __init__.py files are required to make Python treat the directories as containing packages; this is done to prevent directories with a common name, such as string, from unintentionally hiding valid modules that occur later (deeper) on the module search path. In the simplest case, __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__ variable.
 		8.	What is scope in python? <br />
+			There are 4 basic scopes, the LEGB, for Local, Enclosing, Global and Built-in. In addition to those, there is a special scope, the class body, which does not comprise an enclosing scope for methods defined within the class; any assignments within the class body make the variable from there on be bound in the class body. Especially, no block statement, besides def and class, create a variable scope. In Python 2 the list comprehension does not create a variable scope, however in Python 3 the loop variable is created in a new scope.
 		9.	Define a method in Python? <br />
+			A method is a function that takes a class instance as its first parameter. Methods are members of classes. class C: def method(self, possibly, other, arguments): pass # do something here. As you wanted to know what it specifically means in Python, one can distinguish between bound and unbound methods.
 		10.	Define self? <br />
+			The first argument of every class method, including __init__, is always a reference to the current instance of the class. By convention, this argument is always named self. In the __init__ method, self refers to the newly created object; in other class methods, it refers to the instance whose method was called.
 		11.	Describe python usage in web programming? <br />
+			Python is a dynamic, strongly typed, object oriented, multipurpose programming language, designed to be quick (to learn, to use, and to understand), and to enforce a clean and uniform syntax. You can use Python to create web applications on many levels of complexity. 
 		12.	Explain the rules for local and global variables in python? <br />
+			In Python, variables that are only referenced inside a function are implicitly global. If a variable is assigned a new value anywhere within the function’s body, it’s assumed to be a local. If a variable is ever assigned a new value inside the function, the variable is implicitly local, and you need to explicitly declare it as global.
 		13.	How could I go about finding the methods or attributes of an object if I do not have access to the code that created it? <br />
+			You can use the built in dir() function to get a list of all the attributes a module has. Also, you can use the hasattr(module_name, "attr_name") function to find out if a module has a specific attribute.
 		14.	Define class? <br />
+			Class in Python is like a blueprint for creating something. Once you've finished the blueprint, you can created instances of the class. 
 		15.	Explain how Python is interpreted. <br />
+			Python is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes. Python combines remarkable power with very clear syntax. It has interfaces to many system calls and libraries, as well as to various window systems, and is extensible in C or C++. It is also usable as an extension language for applications that need a programmable interface. Finally, Python is portable: it runs on many Unix variants, on the Mac, and on PCs under MS-DOS, Windows, Windows NT, and OS/2.
 		16.	Explain the different between a tuple and a list, and give at least one example of when one would want to use a tuple. <br />
-		17.	Are double quotes single quotes used for String representation in Python? <br />
+			The key difference is that tuples are immutable. This means that you cannot change the values in a tuple once you have created it. So if you're going to need to change the values use a List. Benefits to tuples: Slight performance improvement. As a tuple is immutable it can be used as a key in a dictionary. If you can't change it neither can anyone else, which is to say you don't need to worry about any API functions etc. changing your tuple without being asked. 
+		17.	Are double quotes or single quotes used for String representation in Python? <br />
+			Python is clever; it'll use double quotes for strings that contain single quotes when generating the representation, to minimize escapes. Add a double quote in there as well and it'll revert back to single quotes and escape any single quotes contained. 
 		18.	Does Python strongly support regular expressions? <br />
+			Yes, regular expressions (called REs, or regexes, or regex patterns) are essentially a tiny, highly specialized programming language embedded inside Python and made available through the re module. Using this little language, you specify the rules for the set of possible strings that you want to match; this set might contain English sentences, or e-mail addresses, or TeX commands, or anything you like. 
 		19.	What is list comprehension in Python? <br />
+			List comprehension is an elegant way to define and create list in Python. These lists have often the qualities of sets, but are not in all cases sets. Essentially, it is Python's way of implementing a well-known notation for sets as used by mathematicians. 
   	</p>
   	<h1>MEAN Questions:</h1>
   	<p>
